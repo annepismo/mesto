@@ -1,0 +1,23 @@
+.profile__button-plus {
+  width: 150px;
+  height: 50px;
+  font-size: 38px;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer; /*при наведении мышки на крестик, курсор становиться ввиде руки*/
+  transition: opacity .5s ease; /*при наведении мыши ссылка плавно становится немного прозрачнее*/
+}
+
+/*при наведении мыши ссылка плавно становится немного прозрачнее*/
+.profile__button-plus:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 710px) {
+  .profile__button-plus {
+  width: 282px;
+  height: 50px;
+  }
+}

@@ -1,0 +1,30 @@
+.profile__profession {
+  margin: 0;
+  padding: 6px 0 0 0;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22; /*интерлиньяж равен 1.17 кегля (размера шрифта)*/
+  color: #FFFFFF;
+  max-width: 350px;
+  /*ниже 3 свойства, чтобы появлялось многоточие, если текст не вмещается*/
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media (max-width: 710px) {
+  .profile__profession {
+    padding: 18px 0 20px 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .profile__profession {
+    padding: 14px 0 36px 0;
+    font-size: 14px;
+    line-height: 17px;
+    max-width: 250px;
+  }
+}

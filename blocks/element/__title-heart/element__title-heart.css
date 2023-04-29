@@ -1,0 +1,11 @@
+.element__title-heart {
+  width: 282px;
+  height: 79px;
+  margin: 0;
+  padding: 25px 15px 0 21px;
+  background-color: #FFFFFF;
+  justify-content: space-between;
+  display: flex;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
+}

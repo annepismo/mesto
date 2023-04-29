@@ -1,0 +1,29 @@
+.popup__cloze-icon {
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-size: cover; /*изображение крестика маштабируется под размер родителя*/
+  background-color: transparent; /*фон за крестиком прозрачный*/
+  background-image: url(../../../images/Close.svg);
+  cursor: pointer; /*при наведении мышки на крестик, курсор становиться ввиде руки*/
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  transition: opacity .5s ease;
+  z-index: 3;
+}
+
+.popup__cloze-icon:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 580px) {
+  .popup__cloze-icon {
+    width: 20px;
+    height: 20px;
+    top: -36px;
+    right: 0px;
+  }
+}

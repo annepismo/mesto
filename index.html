@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <!--мета тег определяет отношения между размерами веб-страницы и устройством, на котором открыт сайт.
+    В данном случае ширине страницы привязана к ширине экрана, на котором открыт сайт (width=device-width).-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--описание контента прописывают в метатеге description. Он содержит небольшой текст о том чему посвящён сайт-->
+    <meta name="description" content="Замечательная Практическая работа №4. Яндекс Практикум.">
+    <!--мета тег с указанием автора сайта-->
+    <meta name="author" content="Устюхина Анна при поддержке Яндекс Практикум">
+    <!--подключаем файл со стилями-->
+    <link rel="stylesheet" href="./pages/index.css">
+    <!--задаем имя во вкладке браузера-->
+    <title>Интересные места</title>
+  </head>
+  <!--начало видимой части сайта-->
+  <body class="project">
+    <div class="page">
+      <!--ШАПКА-->
+      <header class="header">
+        <img src="./images/Vector.svg" alt="Логотип Место Россия" class="header__logo">
+      </header>
+      <main class="main">
+        <section class="profile">
+          <img src="./images/image.svg" alt="Фото пользователя" class="profile__avatar">
+            <div class="profile__info">
+              <div class="profile__about">
+                <div class="profile__about-name">
+                  <h1 class="profile__name">Жак-Ив Кусто</h1>
+                  <img src="./images/EditButton.svg" alt="Кнопка редактирования" class="profile__open-button">
+                </div>
+                <p class="profile__profession">Исследователь океана</p>
+              </div>
+              <div class="profile__button-plus">&plus;</div>
+            </div>
+        </section>
+        <section class="elements">
+          <div class="element">
+            <img src="./images/1,6kirill-pershin-1088404-unsplash.svg" alt="Старинная церковь" class="element__foto">
+            <div class="element__foto-cover"></div>
+            <div class="element__title-heart">
+              <h2 class="element__title">Карачаево-Черкессия</h2>
+              <div class="element__heart"></div>
+            </div>
+          </div>
+          <div class="element">
+            <img src="./images/2,4kirill-pershin-1404681-unsplash.svg" alt="Закат, Эльюрус" class="element__foto">
+            <div class="element__foto-cover"></div>
+            <div class="element__title-heart">
+              <h2 class="element__title">Гора Эльбрус</h2>
+              <div class="element__heart"></div>
+            </div>
+          </div>
+          <div class="element">
+            <img src="./images/3,5MaskGroup.svg" alt="Заснеженные горы" class="element__foto">
+            <div class="element__foto-cover"></div>
+            <div class="element__title-heart">
+              <h2 class="element__title">Домбай</h2>
+              <div class="element__heart"></div>
+            </div>
+          </div>
+          <div class="element">
+            <img src="./images/2,4kirill-pershin-1404681-unsplash.svg" alt="Закат, Эльюрус" class="element__foto">
+            <div class="element__foto-cover"></div>
+            <div class="element__title-heart">
+              <h2 class="element__title">Гора Эльбрус</h2>
+              <div class="element__heart"></div>
+            </div>
+          </div>
+          <div class="element">
+            <img src="./images/3,5MaskGroup.svg" alt="Заснеженные горы" class="element__foto">
+            <div class="element__foto-cover"></div>
+            <div class="element__title-heart">
+              <h2 class="element__title">Домбай</h2>
+              <div class="element__heart"></div>
+            </div>
+          </div>
+          <div class="element">
+            <img src="./images/1,6kirill-pershin-1088404-unsplash.svg" alt="Старинная церковь" class="element__foto">
+            <div class="element__foto-cover"></div>
+            <div class="element__title-heart">
+              <h2 class="element__title">Карачаево-Черкессия</h2>
+              <div class="element__heart"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+      </footer>
+    </div>
+    <section class="popup"> <!--Чтобы попап открывался, добавляйте ему модификатор popup_opened с одним-единственным правилом. Правило должно изменять значение свойства display на block или flex. Чтобы закрыть попап, удаляйте у него модификатор popup_opened-->
+      <div class="popup__container">
+        <button class="popup__cloze-icon"></button>
+        <h1 class="popup__profil">Редактировать профиль</h1>
+        <form action="#" class="popup__form">
+          <input type="text" class="popup__name" value="Жак-Ив Кусто" placeholder="Имя" required> <!--input-тег для поля ввода-->
+          <input type="text" class="popup__profession" value="Исследователь океана" placeholder="Профессия" required>
+          <button class="popup__save">Сохранить</button>
+        </form>
+      </div>
+    </section>
+   <script src="./scripts/script.js"></script>
+  </body>
+</html>

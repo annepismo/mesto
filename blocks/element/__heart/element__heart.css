@@ -1,0 +1,18 @@
+.element__heart {
+  width: 22px;
+  height: 19px;
+  margin: 5px 5px 0 0;
+  background: url(../../../images/Group.svg);
+  background-size: cover;
+  cursor: pointer; /*при наведении мышки на крестик, курсор становиться ввиде руки*/
+  transition: opacity .5s ease; /*при наведении мыши лайк плавно становится немного прозрачнее*/
+}
+
+/*при наведении мыши лайк плавно становится немного прозрачнее*/
+.element__heart:hover {
+  opacity: 0.6;
+}
+
+.element__heart:active {
+  background: url(../../../images/Union.svg);
+}

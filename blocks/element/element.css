@@ -1,0 +1,7 @@
+.element {
+  width: 282px;
+  height: 361px;
+  border-radius: 10px 10px 10px 10px; /*почему не работает?*/
+  line-height: 0;
+  position: relative;
+}
