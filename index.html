@@ -12,7 +12,7 @@
     <!--подключаем файл со стилями-->
     <link rel="stylesheet" href="./pages/index.css">
     <!--задаем имя во вкладке браузера-->
-    <title>Интересные места</title>
+    <title>Mesto</title>
   </head>
   <!--начало видимой части сайта-->
   <body class="project">
@@ -28,62 +28,57 @@
               <div class="profile__about">
                 <div class="profile__about-name">
                   <h1 class="profile__name">Жак-Ив Кусто</h1>
-                  <img src="./images/EditButton.svg" alt="Кнопка редактирования" class="profile__open-button">
+                  <!--button - кнопка, обьязательный атрибут type - тип кнопки (button обычная кнопка, reset очистка данных, submit отправка данных формы на сервер. )-->
+                  <button type="button" aria-label="Кнопка редактирования" class="profile__open-button"></button>
                 </div>
                 <p class="profile__profession">Исследователь океана</p>
               </div>
-              <div class="profile__button-plus">&plus;</div>
+              <button type="button" aria-label="Кнопка для дабавления фото" class="profile__button-plus"></button>
             </div>
         </section>
         <section class="elements">
-          <div class="element">
+          <article class="element">
             <img src="./images/1,6kirill-pershin-1088404-unsplash.png" alt="Старинная церковь" class="element__foto">
-            <div class="element__foto-cover"></div>
             <div class="element__title-heart">
               <h2 class="element__title">Карачаево-Черкессия</h2>
-              <div class="element__heart"></div>
+              <button type="button" aria-label="Поставить лайк" class="element__heart"></button>
             </div>
-          </div>
-          <div class="element">
+          </article>
+          <article class="element">
             <img src="./images/2,4kirill-pershin-1404681-unsplash.png" alt="Закат, Эльюрус" class="element__foto">
-            <div class="element__foto-cover"></div>
-            <div class="element__title-heart">
+              <div class="element__title-heart">
               <h2 class="element__title">Гора Эльбрус</h2>
-              <div class="element__heart"></div>
+              <button type="button" class="element__heart"></button>
             </div>
-          </div>
-          <div class="element">
+          </article>
+          <article class="element">
             <img src="./images/3,5MaskGroup.svg" alt="Заснеженные горы" class="element__foto">
-            <div class="element__foto-cover"></div>
             <div class="element__title-heart">
               <h2 class="element__title">Домбай</h2>
-              <div class="element__heart"></div>
+              <button type="button" class="element__heart"></button>
             </div>
-          </div>
-          <div class="element">
+          </article>
+          <article class="element">
             <img src="./images/2,4kirill-pershin-1404681-unsplash.png" alt="Закат, Эльюрус" class="element__foto">
-            <div class="element__foto-cover"></div>
             <div class="element__title-heart">
               <h2 class="element__title">Гора Эльбрус</h2>
-              <div class="element__heart"></div>
+              <button type="button" class="element__heart"></button>
             </div>
-          </div>
-          <div class="element">
+          </article>
+          <article class="element">
             <img src="./images/3,5MaskGroup.svg" alt="Заснеженные горы" class="element__foto">
-            <div class="element__foto-cover"></div>
             <div class="element__title-heart">
               <h2 class="element__title">Домбай</h2>
-              <div class="element__heart"></div>
+              <button type="button" class="element__heart"></button>
             </div>
-          </div>
-          <div class="element">
+          </article>
+          <article class="element">
             <img src="./images/1,6kirill-pershin-1088404-unsplash.png" alt="Старинная церковь" class="element__foto">
-            <div class="element__foto-cover"></div>
             <div class="element__title-heart">
               <h2 class="element__title">Карачаево-Черкессия</h2>
-              <div class="element__heart"></div>
+              <button type="button" class="element__heart"></button>
             </div>
-          </div>
+          </article>
         </section>
       </main>
       <footer class="footer">
@@ -92,15 +87,19 @@
     </div>
     <section class="popup"> <!--Чтобы попап открывался, добавляйте ему модификатор popup_opened с одним-единственным правилом. Правило должно изменять значение свойства display на block или flex. Чтобы закрыть попап, удаляйте у него модификатор popup_opened-->
       <div class="popup__container">
-        <button class="popup__cloze-icon"></button>
-        <h1 class="popup__profil">Редактировать профиль</h1>
-        <form action="#" class="popup__form">
-          <input type="text" class="popup__name" value="Жак-Ив Кусто" placeholder="Имя" required> <!--input-тег для поля ввода-->
-          <input type="text" class="popup__profession" value="Исследователь океана" placeholder="Профессия" required>
-          <button class="popup__save">Сохранить</button>
+        <button type="button" class="popup__cloze-icon"></button>
+        <h3 class="popup__header">Редактировать профиль</h3>
+        <!--name - обьязательный атрибут содержит уникальное имя формы. action – это веб-адрес (URL) программы, которая обрабатывает данные формы.  method - метод отправки данных на сервер (get или post)-->
+        <form class="popup__form" name="form" action="index.html" method="post">
+          <!--input-тег для поля ввода-->
+          <!--value — значение элемента <input>, которое отправляется на сервер в формате «имя=значение». Имя задаётся атрибутом name, а значение — value-->
+          <!--Атрибут required добавляется обязательным полям формы-->
+          <input type="text" class="popup__inputs popup__inputs_user_name" name="inputName" value="Жак-Ив Кусто" placeholder="Имя" required>
+          <input type="text" class="popup__inputs popup__inputs_user_profession" name="inputProfession" value="Исследователь океана" placeholder="О себе" required>
+          <button type="submit" class="popup__save">Сохранить</button>
         </form>
       </div>
     </section>
-   <script src="./scripts/script.js"></script>
+   <script src="./scripts/index.js"></script>
   </body>
 </html>

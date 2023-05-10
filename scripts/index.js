@@ -1,5 +1,3 @@
-console.log("Привет, мир!");
-
 //ОТКРЫТИЕ ОКНА ПОПАП ПРИ НАЖАТИИ НА КНОПКУ-КАРАНДАШ
 //Познакомим JS с открывающимся окном-попапом, поможте нам селектор .popup
 //const - обраащаемся к переменной (обращаемся через селектор .popup к открывающемуся окну (попапу))
@@ -13,14 +11,17 @@ const popupButtonOpenElement = document.querySelector(".profile__open-button");
 //console.log(popupButtonOpenElement);
 
 
-
 //прописываем функцию. Называем "openPopap". Название функции должно содержать глагол (в данном случае  open - "открывать") и существительное (к чему относится действие)
 const openPopap = function () {
-  popupElement.classList.add("popup_opened");
-};
 //для popupElement (элименты с классом popup - открывающегося окна) пишем
 //cвойство classList, которое даёт возможность просматривать и манипулировать классами элемента
 //.add - добавляем класс ("popup_opened") открывающемуся окну (попапу). Класс .popup_opened со свойством display: flex; перекрывает действие класса .popup со свойством display: none; (элемент с таким свойством и все его дочерние элементы не восприниматься технологиями чтения экрана.)
+  popupElement.classList.add("popup_opened");
+//При открытии попапа данные из текстовых полей профиля заносится в инпуты. Проверка происходит: открываем попап => удаляем текстовое содержимое инпутов => закрываем попап => открываем попап, данные из профиля должны быть в инпутах
+  popupNameEiement.value = profileNameElement.textContent;
+  popupProfessionElement.value = profileProfessionElement.textContent;
+};
+
 
 
 //*addEventListener - метод, который принимает на вход 2 значения: 1. событие (в нашем случае клик мышки), 2. Функцию
@@ -46,8 +47,8 @@ popupClozeElement.addEventListener ("click", clovzePopap);
 // После внесения изменений в поля "Имя", "Профессия" и нажатия кнопки «Сохранить» информация на странице
 // должна обновиться, а попап автоматически закрыться
 // Находим поля "Имя", "Профессия" попапа в DOM
-const popupNameEiement = popupElement.querySelector(".popup__name");
-const popupProfessionElement = popupElement.querySelector(".popup__profession");
+const popupNameEiement = popupElement.querySelector(".popup__inputs_user_name");
+const popupProfessionElement = popupElement.querySelector(".popup__inputs_user_profession");
 // Находим элементы, куда должны быть вставлены значения полей
 const profileNameElement = document.querySelector(".profile__name");
 const profileProfessionElement = document.querySelector(".profile__profession");

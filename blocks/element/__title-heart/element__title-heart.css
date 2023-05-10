@@ -1,8 +1,8 @@
 .element__title-heart {
   width: 282px;
-  height: 79px;
+  min-height: 79px;
   margin: 0;
-  padding: 25px 15px 0 21px;
+  padding: 25px 21px 0 15px;
   background-color: #FFFFFF;
   justify-content: space-between;
   display: flex;

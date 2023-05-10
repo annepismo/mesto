@@ -3,16 +3,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, 282px);
   gap: 20px 17px;
+  margin: 0 auto;
 }
 
-@media(max-width: 880px) {
+@media(max-width: 900px) {
   .elements{
-  margin-left: calc((100% - 581px)/2);
+    justify-content: center;
  }
 }
 
-@media(max-width: 580px) {
-  .elements{
-  margin-left: calc((100% - 282px)/2);
- }
-}
+

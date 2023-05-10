@@ -1,11 +1,7 @@
 .profile__about-name {
   padding: 0;
+  margin: 0;
   display: flex;
   align-items: center;
 }
 
-@media (max-width: 650px) {
-  .profile__about-name {
-    align-items: end;
-  }
-}

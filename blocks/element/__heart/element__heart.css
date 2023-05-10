@@ -10,7 +10,7 @@
 
 /*при наведении мыши лайк плавно становится немного прозрачнее*/
 .element__heart:hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .element__heart:active {
