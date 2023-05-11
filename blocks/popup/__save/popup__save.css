@@ -19,7 +19,7 @@
 }
 
 .popup__save:hover {
-  opacity: rgba(0, 0, 0, 0.8);
+  background-color: rgb(58, 58, 58);
 }
 
 @media (max-width: 580px) {
